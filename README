@@ -1,0 +1,24 @@
+# test-llo-cab
+Technical test repository including the following folders:
+  - data
+  - code
+  - docs
+
+# Code
+This is a short R code used to make the first data cleaning assuming the following:
+1. We'll analyze only the journeys considered to be real and that 
+  - start_at: datetime when the rider requests the vehicle 
+  - arrived_at: datetime when the driver arrives to the meeting point to pick up the rider. This should be greater than or at least equal to the "start_at" datetime
+  - end_at: datetime when the journey is ended. This should be greater than or at least equal to the "arrived_at" datetime
+
+# Data
+This is where all data files are stored
+  - cleaned data: R script output
+  - SQL queries data: data to test the SQL queries
+  - 
+
+
+# Docs
+Doc including the general assumptions for each exercise
+Assuming that each sale amount is the sum of the sales_entries price considering the discount
+Amount = sum(price1*(1-discount1/100)+price2*(1-discount2/100)+...)
