@@ -11,8 +11,9 @@ Technical test repository including the following folders:
 
 ### **Exercise 1**
 It consists of a Tableau file. The output will be the story named "TeLlevo" that will be used as a presentation for the new Chief Operating Officer
-##### Descriptive analysis
+#### Descriptive analysis
 - **General overview**
+
    **1.** Number of journeys that ended with a drop off, number of taxis and number of drivers
 
    **2.** Evolution of the number of journeys per month during year 2010
@@ -24,20 +25,25 @@ It consists of a Tableau file. The output will be the story named "TeLlevo" that
    **5.** Shortest journeys seems to be related to "easy" vehicles
      
 - **Profitability**
+
    **1.** Average income per day hour to identifiy which hours are the ones that lead us to a greater income
+   
    **2.** Average duration of the journeys (end_at - arrived_at) compared to the profitability (price/cost)
 
 - **Cancellations**
+
    **1.** Number of cancellations both per rider and per driver and per month
 
    **2.** Average waiting time till pickup
 
 - **Locations**
+
    **1.** Origin map with the journeys starting points with the average price per point to see which ones are the ones that lead to a higher income
 
    **2.** Best origins in terms of average income
 
 - **Best/worst riders & drivers**
+
    **1.** Top 3 drivers
 
    **2.** Top 3 riders
@@ -45,19 +51,23 @@ It consists of a Tableau file. The output will be the story named "TeLlevo" that
    **3.** Check correlation between scores
    
 
-##### Business recommendations
+#### Business recommendations
+
    **1.** Increase the income of the central day hours 11am - 12pm as they seem to have a low ratio price/cost. It seems to be related to the traffic as althoug the distance is not high, the time on the ride is high. It seems to be an opportunity to increase the tariff of duration_price for that hours
+   
    **2.** Reduce the amount of rider cancellations by reducing the waiting time and improving the correlation between distance and price_distance so that the rider does not have the perception of overpaying for the ride
+   
    **3.** Increase the number of available vehicles in the places with higher demand as the (lat,lon) for the locations with higher number of journeys start and higher income is not the one with the higher number of driver starts
+   
    **4.** Reduce the amount of null rates and identify real 5 star rates as it seems that both riders and drivers set either null or 5* most of times
 
-##### General assumptions for Exercise 1
+#### General assumptions for Exercise 1
 We'll mainly analyze only the journeys considered to be real and completed
   - start_at: datetime when the rider requests the vehicle 
   - arrived_at: datetime when the driver arrives to the meeting point to pick up the rider. This should be greater than or at least equal to the "start_at" datetime
   - end_at: datetime when the journey is ended. This should be greater than or at least equal to the "arrived_at" datetime
  
-Besides, weíll filter the journeys with end_state = ìdrop offî except for the case in which weíre analyzing the cancellations
+Besides, we‚Äôll filter the journeys with end_state = ‚Äúdrop off‚Äù except for the case in which we‚Äôre analyzing the cancellations
 
 Price is assumed to be the income per journey while cost is assumed to be the actual cost that each journey represents for the company. Thus, we calculate the profitability as price/cost
 
@@ -98,7 +108,7 @@ Price is assumed to be the income per journey while cost is assumed to be the ac
     HAVING sum(price*(1-discount/100))<1500;
     ```
 
-##### General assumptions for Exercise 2
+#### General assumptions for Exercise 2
 We assume that each sale amount is the sum of the sales_entries price considering the discount. That way for a sale_id with two sales_entry_id, the amount will be equal to:
     ``` 
     Amount = sum(price1*(1-discount1/100)+price2*(1-discount2/100))
