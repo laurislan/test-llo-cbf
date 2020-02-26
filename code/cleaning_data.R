@@ -15,6 +15,6 @@ data$jorneyStatus <- ifelse(data$end_state == "drop off", "completed",
                             ifelse(data$end_state %in% cancelEndStates, "canceled", "other"))
 
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-setwd('../data/Visualization data')
+setwd('../data/visualization-data')
 getwd()
 write.xlsx(data, 'cleanData.xlsx')
