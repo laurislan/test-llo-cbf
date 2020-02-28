@@ -41,6 +41,12 @@ It consists of a Tableau file. The output will be the story named "TeLlevo" that
    **1.** Origin map with the journeys starting points with the average price per point to see which ones are the ones that lead to a higher income
 
    **2.** Best origins in terms of average income
+   
+- **Paths**
+
+   **1.** Map with paths between start lat-lon and end lat-lon
+
+   **2.** % of journeys per path distance
 
 - **Best/worst riders & drivers**
 
@@ -48,7 +54,7 @@ It consists of a Tableau file. The output will be the story named "TeLlevo" that
 
    **2.** Top 3 riders
    
-   **3.** Check correlation between scores
+   **3.** Check correlation between driver scores and waiting time
    
 
 #### Business recommendations
@@ -59,7 +65,9 @@ It consists of a Tableau file. The output will be the story named "TeLlevo" that
    
    **3.** Increase the number of available vehicles in the places with higher demand as the (lat,lon) for the locations with higher number of journeys start and higher income is not the one with the higher number of driver starts
    
-   **4.** Reduce the amount of null rates and identify real 5 star rates as it seems that both riders and drivers set either null or 5* most of times
+   **4.** Reduce the carboon footprint by changing the way people moves for the sort distances. Switch from cars to electric motorbikes or scooters
+      
+   **5.** Reduce the amount of null rates and identify real 5 star rates as it seems that both riders and drivers set either null or 5* most of times
 
 #### General assumptions for Exercise 1
 We'll mainly analyze only the journeys considered to be real and completed
